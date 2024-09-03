@@ -1,0 +1,43 @@
+package com.mycompany.project1;
+import java.util.Scanner; 
+public class coniva {
+    public static void main(String[] args) {
+        
+        
+        Scanner tem = new Scanner (System.in);
+        int num1;
+        int num2;
+        int num3;
+        int num4;
+        double iva = 0.19; 
+        double res;
+        
+   
+        System.out.println("Ingrese numero 1");
+        num1 = tem.nextInt();
+        System.out.println("Ingrese numero 2");
+        num2 = tem.nextInt();
+        System.out.println("Ingrese numero 3");
+        num3 =tem.nextInt();
+        System.out.println("Ingrese numero 4");
+        num4 =tem.nextInt();
+        
+        // Cálculo del total sin IVA
+       
+        res = num1+num2+num3+num4;
+        
+        // Cálculo del total con IVA
+        
+         
+        double totalConIva = res + (res * iva);
+        
+        // resultados
+        
+        System.out.println("Tu compra sin IVA es: " + res);
+        System.out.println("Tu compra con IVA es: " + totalConIva);
+           
+        
+        
+    
+    }
+}
