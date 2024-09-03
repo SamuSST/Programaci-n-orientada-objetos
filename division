@@ -1,0 +1,26 @@
+package com.mycompany.project1;
+import java.util.Scanner; 
+public class division {
+    public static void main(String[] args) {
+        
+        
+        Scanner tem = new Scanner (System.in);
+        int num1;
+        int num2;
+        
+        int res;
+        
+        
+   
+        System.out.println("Ingrese numero 1");
+        num1 = tem.nextInt();
+        System.out.println("Ingrese numero 2");
+        num2 = tem.nextInt();
+        
+        // Cálculo de la division
+        
+        res = num1/num2;
+        
+       System.out.println("el total de la suma es"+res);
+    }
+}
