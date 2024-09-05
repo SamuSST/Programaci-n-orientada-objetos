@@ -1,0 +1,41 @@
+package com.mycompany.project1;
+import java.util.Scanner;
+
+public class Compra {
+    public static void main (String[]ar){
+        Scanner tem = new Scanner (System.in);
+        
+        double compra = 1000000;
+        int MetodoDePago;
+        System.out.println("el valor de su compra es$"+compra);
+        System.out.println("tenemos los siguientes metodos de pago");
+        System.out.println("1.Efectivo (50% de descuento en su compra)");
+        System.out.println("2.Debito (20% de descuento en su compra)");
+        System.out.println("3.Credito (10% de descuento en su compra)");
+        
+        //capturar el metodo de pago del usuario
+        
+        System.out.print("Seleccione su método de pago (1, 2, 3): ");
+        MetodoDePago = tem.nextInt();
+        
+        //calcular el total con descuento
+        
+        if (MetodoDePago== 1){
+            System.out.println("Ha seleccionado Efectivo, el valor de su compra es $"+(compra*0.50));  //50% de descuento
+        
+        }else if (MetodoDePago == 2){
+            System.out.println("Ha seleccionado Debito, el valor de su compra es $"+(compra*0.20)); //20% de descuento
+            
+        }else if (MetodoDePago== 3){
+           
+            System.out.println("Ha seleccionado Credito, el valor de su compra es $"+(compra*0.10)); //10% de descuento
+        
+        }else 
+            System.out.println("ERROR Digite su metodo de pago del 1-3");
+        
+        
+      
+        
+    }
+    
+}
