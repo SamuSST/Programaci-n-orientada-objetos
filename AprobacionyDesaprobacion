@@ -1,0 +1,37 @@
+package com.mycompany.project1;
+import java.util.Scanner;
+
+public class AprobacionyDesaprobacion {
+    public static void main (String[]ar){
+        Scanner tem = new Scanner ( System.in);
+        int nota1,nota2,nota3;
+        System.out.println("ingrese primera nota");
+        nota1 = tem.nextInt();
+        System.out.println("ingrese segunda nota");
+        nota2 = tem.nextInt();
+        System.out.println("ingrese tercera nota");
+        nota3 = tem.nextInt();
+        
+        int promedio = ((nota1+nota2+nota3)/3);
+        
+        if (promedio >=0 && promedio<=29){
+            System.out.println("REPROBO");
+        
+        }else if( promedio >= 30 && promedio<= 39){
+            System.out.println("APROBO");
+        
+        }else if(promedio >=40 && promedio <= 45){
+            System.out.println("FELICIDADES");
+        
+        }else if(promedio >=46 && promedio <=50){
+            System.out.println("SOBRESALIENTE");
+        
+        }else{
+            System.out.println("su nota no existe");
+        }
+            
+        
+       
+    
+}
+}
