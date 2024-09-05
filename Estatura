@@ -1,0 +1,30 @@
+package com.mycompany.project1;
+
+import java.util.Scanner;
+
+public class Estatura {
+    public static void main(String[] args) {
+        Scanner tem = new Scanner(System.in);
+        double estatura;
+
+        System.out.println("Ingrese su estatura en centímetros (ejemplo: 180):");
+        estatura = tem.nextDouble();
+
+        if (estatura >= 1 && estatura<= 150){
+            System.out.println("estatura baja");
+            
+        }else if (estatura >= 151 && estatura <=160){
+            System.out.println("estatura baja");
+            
+        }else if (estatura >= 161 && estatura <= 180){
+            System.out.println("estatura normal");
+        
+        }else if(estatura >= 181 && estatura <=220 ){ 
+            System.out.println("estatura alta");
+            
+        }else {
+            System.out.println("no existe");
+        }
+    }
+        
+}
