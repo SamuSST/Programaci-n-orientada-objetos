@@ -1,0 +1,23 @@
+package com.mycompany.project1;
+
+import java.util.Scanner;
+
+public class Pares {
+    public static void main(String[] args) {
+        Scanner tem = new Scanner(System.in);
+        int pares,num1;
+        
+        for(num1=1;num1<=100;num1++){
+            if (num1 % 2 == 0){
+                System.out.println(num1);
+            }else {
+                
+            }
+                
+                      
+            
+            
+        }
+        
+    }
+}
