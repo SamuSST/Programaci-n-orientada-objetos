@@ -1,0 +1,26 @@
+package com.mycompany.project1;
+
+import java.util.Scanner;
+
+public class CalculoProductos{
+    public static void main(String[]args){
+        Scanner tem = new Scanner(System.in);
+        double valortotal=0;
+        int cont;//contador de producto
+        double iva=0.19;// el IVA 19%
+        
+        for (cont=1;cont<=5;cont++){// ingresa el valor de cada producto y lo va sumando a un valor total
+            System.out.println("ingrese el valor de su primer producto" +cont);
+            double valordelproducto = tem.nextInt();
+            valortotal = valortotal + valordelproducto;
+            System.out.println("el valor total de su compra sin incluir el iva es de "+ valortotal);// se imprime el valor total sin IVA
+            
+        }
+        valortotal=valortotal+(valortotal*iva);// se suma el IVA al valor total
+        System.out.println("el valor total de su compra incluido el iva  es de "+ valortotal);// se imprime el valor total con IVA
+            
+                    
+     }
+            
+            
+}
