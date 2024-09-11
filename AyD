@@ -1,0 +1,32 @@
+package com.mycompany.project1;
+
+import java.util.Scanner;
+
+public class AyD {
+    public static void main(String[] args) {
+        Scanner tem = new Scanner (System.in);
+        
+        int aprobados,reprobados,nota,f;
+        aprobados=0;
+        reprobados=0;
+        for(f=1;f<=50;f++){
+            System.out.println("ingrese nota");
+            nota=tem.nextInt();
+            
+        if(nota>=30){
+            aprobados=aprobados+1;
+       
+        }else{
+            reprobados=reprobados+1;
+        }
+        
+        
+        
+        }
+        System.out.println("cantidad de aprobados");
+        System.out.println(aprobados);
+        System.out.println("cantidad de reprobados");
+        System.out.println(reprobados);
+        
+    }
+}         
