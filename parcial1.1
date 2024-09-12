@@ -1,0 +1,44 @@
+package com.my.company.parcial1;
+
+import java.util.Scanner;
+
+public class Clase1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Declarar arrays para almacenar nombres, notas y resultados
+        String[] nombres = new String[3];
+        int[] notas = new int[3];
+        String[] resultados = new String[3];
+
+        // Ingresar nombres y notas de los 3 estudiantes
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Ingrese el nombre del estudiante " + (i + 1) + ": ");
+            nombres[i] = scanner.nextLine();
+            
+            System.out.println("Ingrese la nota de " + nombres[i] + ": ");
+            notas[i] = scanner.nextInt();
+            scanner.nextLine();  // Limpiar el buffer después de ingresar la nota
+        }
+
+        // Evaluar y clasificar el rendimiento de cada estudiante
+        for (int i = 0; i < 3; i++) {
+            if (notas[i] >= 0 && notas[i] <= 29) {
+                resultados[i] = "Perdió";
+            } else if (notas[i] >= 30 && notas[i] <= 40) {
+                resultados[i] = "Aprobó con aceptable";
+            } else if (notas[i] >=41 && notas[i]<=50){
+                resultados[i] = "Nota sobresaliente";
+            } else{
+                resultados[i] = "Nota no valida";
+            }
+        }
+
+        // Mostrar los resultados
+        for (int i = 0; i < 3; i++) {
+            System.out.println("El estudiante " + nombres[i] + " tiene una nota de " + notas[i] + " y " + resultados[i]);
+        }
+
+        
+    }
+}
