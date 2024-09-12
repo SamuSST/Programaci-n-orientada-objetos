@@ -1,0 +1,91 @@
+package com.my.company.parcial1;
+
+import java.util.Scanner;
+
+public class Clase2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Definir precios de productos y el IVA y metodos de pago
+        double monitor = 500000;
+        double teclado = 50000;
+        double mouse = 50000;
+        double IVA = 0.19;
+        double efectivo = 0.20; // Descuento 20 por pago en efectivo
+        double debito = 0.10;   // Descuento 10% por pago con débito
+        double credito = 0.05;  // Descuento 5% por pago con crédito
+
+        // Mostrar menú de productos
+        System.out.println("¿Qué productos va a comprar?");
+        System.out.println("1. Monitor - $500,000");
+        System.out.println("2. Teclado - $50,000");
+        System.out.println("3. Mouse - $50,000");
+        System.out.println("4. Salir");
+
+        double total = 0.0;
+        boolean continuar = true; // Variable para controlar el bucle
+
+        while (continuar) {
+            System.out.print("Ingrese el número del producto (1-4): ");
+            int opcion = scanner.nextInt(); 
+            
+            if (opcion == 1) {
+                total += monitor; 
+                System.out.println("Monitor agregado. Precio: $" + monitor);
+            } else if (opcion == 2) {
+                total += teclado; 
+                System.out.println("Teclado agregado. Precio: $" + teclado);
+            } else if (opcion == 3) {
+                total += mouse; 
+                System.out.println("Mouse agregado. Precio: $" + mouse);
+            } else if (opcion == 4) {
+                continuar = false; // Salir del bucle
+                System.out.println("Saliendo del programa...");
+            } else {
+                System.out.println("Opción no válida. Por favor, elija un número del 1 al 4.");
+            }
+        }
+
+        // Calcular total con IVA
+        double totalConIVA = total + (total * IVA);
+
+        // Mostrar el total
+        System.out.println("Total sin IVA: $" + total);
+        System.out.println("Total con IVA (19%): $" + totalConIVA);
+
+        // Pedir al usuario que elija el método de pago
+        System.out.println("¿Cómo desea pagar?");
+        System.out.println("1. Efectivo - 20% de descuento");
+        System.out.println("2. Débito - 10% de descuento");
+        System.out.println("3. Crédito - 5% de descuento");
+        System.out.println("4. Sin descuento");
+        
+        System.out.print("Ingrese el número del método de pago (1-4): ");
+        int metodoPago = scanner.nextInt();
+
+        double descuento = 0.0; 
+
+        // Aplicar descuento según el método de pago seleccionado
+        if (metodoPago == 1) {
+            descuento = efectivo;
+        } else if (metodoPago == 2) {
+            descuento = debito;
+        } else if (metodoPago == 3) {
+            descuento = credito;
+        } else if (metodoPago == 4) {
+            descuento = 0.0;
+        } else {
+            System.out.println("Opción no válida. No se aplicará ningún descuento.");
+            descuento = 0.0;
+        }
+
+        // Aplicar el descuento al total con IVA
+        double totalConDescuento = totalConIVA - (totalConIVA * descuento);
+
+        // Mostrar el total final después del descuento
+        System.out.println("Total con descuento: $" + totalConDescuento);
+
+        // Cerrar el Scanner
+        scanner.close();
+    }
+}
