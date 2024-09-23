@@ -1,0 +1,65 @@
+package com.mycompany.project1;
+import java.util.Scanner;
+
+
+public class ParcialCorreccion {
+    public static void main (String[]args){
+        
+        Scanner tem = new Scanner ( System.in);
+        
+        String student1,student2,student3;
+        int notaS1,notaS2,notaS3;
+        
+        //Ingresan los estudiantes y sus respectivas notas
+        
+        System.out.println("ingresa el nombre de el primer estudiante");
+        student1 = tem.nextLine();
+        
+        System.out.println("ingresa el nombre de el segundo estudiante");
+        student2 = tem.nextLine();
+        
+        System.out.println("ingresa el nombre de el tercer estudiante");
+        student3 = tem.nextLine();
+        
+        System.out.println("Estudiantes: "+ student1+ ", "+student2+ ", "+student3);
+        
+        System.out.println("ingresa la nota de: "+ student1);
+        notaS1 = tem.nextInt();
+        System.out.println("ingresa la nota de: "+student2);
+        notaS2 = tem.nextInt();
+        System.out.println("ingresa la nota de: "+student3);
+        notaS3 = tem.nextInt();
+        
+        //Se calcula quien perdio y se da el resultado segun su nota
+        
+        if(notaS1<=29){
+            System.out.println(student1+"Perdio");
+        }else if(notaS1>29&&notaS1<=40){
+            System.out.println(student1+"Aprobó con aceptable");
+        }else if(notaS1>41&&notaS1<=50){
+            System.out.println(student1+"Nota sobresaliente");
+        }
+        
+        if(notaS2<=29){
+            System.out.println(student2+"Perdio");
+        }else if(notaS2>29&&notaS1<=40){
+            System.out.println(student2+"Aprobó con aceptable");
+        }else if(notaS2>41&&notaS1<=50){
+            System.out.println(student2+"Nota sobresaliente");
+        }
+        
+        if(notaS3<=29){
+            System.out.println(student3+"Perdio :(");
+        }else if(notaS3>29&&notaS1<=40){
+            System.out.println(student3+"Aprobó con aceptable ._.");
+        }else if(notaS3>41&&notaS1<=50){
+            System.out.println(student3+"Nota sobresaliente :)");
+        }
+        
+        
+       
+        
+    }
+    
+}
+        //FIN :)
